@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style/portfolio.css">
+    </head>
+<style>
+  
+#Progress_Status {
+  width: 50%;
+  background-color: #ddd;
+}
+  
+#myprogressBar {
+  width: 1%;
+  height: 35px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+}
+#myprogressBar2 {
+  width: 1%;
+  height: 35px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+}
+#myprogressBar3 {
+  width: 1%;
+  height: 35px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+}
+#myprogressBar4 {
+  width: 1%;
+  height: 35px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+}
+#myprogressBar5 {
+  width: 1%;
+  height: 35px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+}
+ 
+  
+</style>
+<body>
+  
+<h3>Mes compétences</h3>
+  
+<p>PHP</p>
+  
+<div id="Progress_Status">
+  <div id="myprogressBar">1%</div>
+</div>
+  
+<br>
+<p>HTML/CSS</p>
+  
+<div id="Progress_Status">
+  <div id="myprogressBar2">1%</div>
+</div>
+  
+<br>
+<p>C#</p>
+  
+<div id="Progress_Status">
+  <div id="myprogressBar3">1%</div>
+</div>
+  
+<br>
+<p>Dart</p>
+  
+<div id="Progress_Status">
+  <div id="myprogressBar4">1%</div>
+</div>
+  
+<br>
+<p>JS</p>
+  
+<div id="Progress_Status">
+  <div id="myprogressBar5">1%</div>
+</div>
+  
+<br>
+
+
+<button onclick="update()">Show</button> 
+  
+<script>
+  
+function update() {
+  var element = document.getElementById("myprogressBar");  
+  var element2 = document.getElementById("myprogressBar2");
+  var element3 = document.getElementById("myprogressBar3");
+  var element4 = document.getElementById("myprogressBar4");
+  var element5 = document.getElementById("myprogressBar5");
+  var width = 1;
+  var identity = setInterval(scene, 10);
+  function scene() {
+    if (width >= 100) {
+      clearInterval(identity);
+    } else {
+      width++; 
+      element.style.width = width * 0.5 + '%'; 
+      element.innerHTML = width * 0.5  + '%';
+      element2.style.width = width * 0.8 + '%'; 
+      element2.innerHTML = width * 0.8  + '%';
+      element3.style.width = width * 0.6 + '%'; 
+      element3.innerHTML = width * 0.6  + '%';
+      element4.style.width = width * 0.5 + '%'; 
+      element4.innerHTML = width * 0.5  + '%';
+      element5.style.width = width * 0.6 + '%'; 
+      element5.innerHTML = width * 0.6  + '%';
+
+
+    }
+  }
+}
+  
+</script>
+  
+</body>
+</html>
